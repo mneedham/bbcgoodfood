@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title>Train those ingredients</title>
+
+    <style>
+        li.token { display: inline; }
+
+
+
+
+    </style>
+
+</head>
+
+<body>
+
+<ul>
+    {% for ingredient in ingredients %}
+    <li>
+
+        {{ ingredient.value}} [{{ingredient.ingredientId}}]
+
+
+        <form method="POST" action="/ingredient/{{ingredient.ingredientId}}">
+            {% for token in ingredient.tokens %}
+            <div style="display: inline; width: 150px">
+                {{ token.value }}
+
+                <select name="label_{{token.index}}">
+                    <option value="0">0</option>
+                    <option value="B-ING">B-ING</option>
+                    <option value="I-ING">I-ING</option>
+                </select>
+
+
+            </div>
+            {% endfor %}
+
+            <input type="submit" />
+        </form>
+
+
+    </li>
+    {% endfor %}
+</ul>
+
+
+</body>
+
+</html>
