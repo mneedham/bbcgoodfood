@@ -9,7 +9,7 @@ RETURN ingredient.value AS ingredient, apoc.coll.sortNodes([(ingredient)-[:HAS_T
 """
 
 with driver.session() as session, open("/tmp/data.txt", "w") as file:
-    writer = csv.writer(file, delimiter="\t")
+    writer = csv.writer(file, delimiter=" ")
     result = session.run(tokenized_ingredients_query)
 
     for row in result:

@@ -2,15 +2,6 @@
 
 <head>
     <title>Train those ingredients</title>
-
-    <style>
-        li.token { display: inline; }
-
-
-
-
-    </style>
-
 </head>
 
 <body>
@@ -28,7 +19,7 @@
                 {{ token.value }}
 
                 <select name="label_{{token.index}}">
-                    <option value="0">0</option>
+                    <option value="O">O</option>
                     <option value="B-ING">B-ING</option>
                     <option value="I-ING">I-ING</option>
                 </select>
@@ -37,7 +28,7 @@
             </div>
             {% endfor %}
 
-            <input type="submit" />
+            <input type="submit"/>
         </form>
 
 
