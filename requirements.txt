@@ -104,7 +104,7 @@ sklearn-pandas==1.6.0
 spacy==2.0.3
 statsmodels==0.9.0
 tensorboard==1.9.0
-tensorflow==1.9.0
+tensorflow==2.6.4
 termcolor==1.1.0
 terminado==0.8.1
 testpath==0.3.1
